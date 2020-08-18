@@ -19,15 +19,15 @@ const FriendsList = () => {
     console.log(list)
 
     return(
-        <div>
+        <div> 
+            <AddAFriend/>
             {list.map(friend => 
-                <div key={friend.id}>
+                <div id='container' key={friend.id}>
                     <h2>{friend.name}</h2>
                     <p>{friend.age}</p>
                     <p>{friend.email}</p>
                 </div>
             )}
-            <AddAFriend/>
         </div>
     )
 }

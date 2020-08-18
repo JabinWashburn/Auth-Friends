@@ -36,9 +36,9 @@ const AddAFriend = () => {
 
     return(
         <form onSubmit={onSubmit}>
-        <input type='text' name='name' placeholder='name' value={form.name} onChange={handleChange}/>
-        <input type='text' name='age' placeholder='age' value={form.age} onChange={handleChange}/>
-        <input type='text' name='email' placeholder='email' value={form.email} onChange={handleChange}/>
+        <input autoComplete='off' type='text' name='name' placeholder='name' value={form.name} onChange={handleChange}/>
+        <input autoComplete='off' type='text' name='age' placeholder='age' value={form.age} onChange={handleChange}/>
+        <input autoComplete='off' type='text' name='email' placeholder='email' value={form.email} onChange={handleChange}/>
         <button type='submit'>Submit</button>
         </form>
     )
