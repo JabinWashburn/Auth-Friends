@@ -3,8 +3,8 @@ import axiosWithAuth from '../Utils/axiosWithAuth'
 
 const Login = (props) => {
     const [login, setLogin] = useState({
-        username: 'jabin',
-        password: 'qweasdzxc'
+        username: 'Lambda School',
+        password: 'i<3Lambd4'
     })
 
     const handleChange = e => {
@@ -16,11 +16,11 @@ const Login = (props) => {
     const onSubmit = e => {
         e.preventDefault()
         axiosWithAuth()
-        .post('/login', login)
+        .post('/api/login', login)
         .then(res => {
             localStorage.setItem('token', res.data.payload)
             setLogin(login)
-            props.history.push('/friends' || '/edit/friends')
+            props.history.push('/api/friends' || '/api/edit/friends')
         })
         .catch(err => {
             localStorage.removeItem('token')
@@ -37,3 +37,4 @@ const Login = (props) => {
 }
 
 export default Login
+
